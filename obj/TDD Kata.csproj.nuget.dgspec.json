@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[3.13.3, )"
             },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
             "NuGet.Frameworks": {
               "target": "Package",
               "version": "[6.3.0, )"

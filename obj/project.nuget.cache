@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "foArr+9JC4YgSz9ghjFLyvso1rUpwMPg0+SqFk2xlaQdpvH2IQxlSrrJME05T2DC4WFbMa6Q7l0B+9c5hbq0Hw==",
+  "dgSpecHash": "A/Co/rPx1hw91tod+cuMcY5j6Xeo2hGbEl8a8XuOUSZMbBj/7bzMCiUCX4mkjnMshjQ//SskQe8+EbZD0mo3/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ivan\\source\\repos\\TDD Kata\\TDD Kata.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\Ivan\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\nuget.frameworks\\6.3.0\\nuget.frameworks.6.3.0.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
+    "C:\\Users\\Ivan\\.nuget\\packages\\nunit3testadapter\\4.2.1\\nunit3testadapter.4.2.1.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\system.collections\\4.0.11\\system.collections.4.0.11.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\system.diagnostics.debug\\4.0.11\\system.diagnostics.debug.4.0.11.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\system.diagnostics.tools\\4.0.1\\system.diagnostics.tools.4.0.1.nupkg.sha512",
