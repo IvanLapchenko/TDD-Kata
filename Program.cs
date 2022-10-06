@@ -9,24 +9,30 @@ namespace TDD_Kata
     {
         public int Add(string numbers)
         {
-            string[] stringArray;
-            int[] numbersArray;
+            
 
-            if (numbers == "")
-                return 0;
-
-            //if (numbers.Split(',').Length == 1)
-            //    return Convert.ToInt32(numbers);
-
-            if (numbers.Split(',').Length > 0)
+            if (numbers.Length > 0)
             {
-                stringArray = numbers.Split(',');
-                numbersArray = Array.ConvertAll(stringArray, Convert.ToInt32);
+                int[] numbersArray = PreparingNumbersArray(numbers);
+
                 return numbersArray.Sum();
             }
+
             else { return 0; }
                    
             
+        }
+
+        public int[] PreparingNumbersArray(string str)
+        {
+            string[] stringArray;
+            int[] numbersArray;
+
+            str = str.Replace("\n", ",");
+            stringArray = str.Split(',');
+            numbersArray = Array.ConvertAll(stringArray, Convert.ToInt32);
+
+            return numbersArray;
         }
     }
 
@@ -36,9 +42,9 @@ namespace TDD_Kata
         {
             StringCalculator stringCalculator = new();
 
-            string num = "12,25,17";
+            string num = "";
             Console.WriteLine(num.Split(',').Length);
-            //Console.WriteLine(stringCalculator.Add("1\n2, 3"));
+            Console.WriteLine(stringCalculator.Add("1\n2,3"));
             Console.WriteLine("1\n2,3");
         }
     }
