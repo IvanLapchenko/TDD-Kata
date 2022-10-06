@@ -14,9 +14,11 @@ namespace TDD_Kata
 
             if (numbers == "")
                 return 0;
-            if (numbers.Split(',').Length == 1)
-                return Convert.ToInt32(numbers);
-            if (numbers.Split(',').Length > 1)
+
+            //if (numbers.Split(',').Length == 1)
+            //    return Convert.ToInt32(numbers);
+
+            if (numbers.Split(',').Length > 0)
             {
                 stringArray = numbers.Split(',');
                 numbersArray = Array.ConvertAll(stringArray, Convert.ToInt32);
@@ -36,7 +38,8 @@ namespace TDD_Kata
 
             string num = "12,25,17";
             Console.WriteLine(num.Split(',').Length);
-            Console.WriteLine(stringCalculator.Add("1,3") ); 
+            //Console.WriteLine(stringCalculator.Add("1\n2, 3"));
+            Console.WriteLine("1\n2,3");
         }
     }
 }
