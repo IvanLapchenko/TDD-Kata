@@ -29,5 +29,11 @@ namespace TDD_Kata
             StringCalculator stringCalculator = new();
             Assert.AreEqual(4, stringCalculator.Add("1,3"));
         }
+        [Test]
+        public void TakesWithNewlineAndIgnoresIt()
+        {
+            StringCalculator stringCalculator = new();
+            Assert.AreEqual(6, stringCalculator.Add("1\n2,3"));
+        }
     }
 }
