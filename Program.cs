@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Xml;
+using NUnit.Framework.Internal;
 
 namespace TDD_Kata
 {
@@ -25,11 +28,14 @@ namespace TDD_Kata
 
         public int[] PreparingNumbersArray(string str)
         {
+            char[] delimiterChars = { '/', ',', ';', ' ', '\n' };
+
             string[] stringArray;
             int[] numbersArray;
 
-            str = str.Replace("\n", ",");
-            stringArray = str.Split(',');
+            stringArray = str.Split(delimiterChars);
+            stringArray = stringArray.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+
             numbersArray = Array.ConvertAll(stringArray, Convert.ToInt32);
 
             return numbersArray;
@@ -40,14 +46,13 @@ namespace TDD_Kata
     {
         public static void Main()
         {
+
+
             StringCalculator stringCalculator = new();
 
-            string num = "//;\n1;2";
-            Console.WriteLine(num.Split(',').Length);
-            Console.WriteLine(stringCalculator.Add(num));
-            Console.WriteLine("1\n2,3");
+            string str = "//;\n1;2";
 
-            foreach (char n in num) { Console.Write(n); }
+
         }
     }
 }

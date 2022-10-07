@@ -97,3 +97,6 @@ C:\Users\Ivan\source\repos\TDD Kata\bin\Debug\net6.0\nunit.engine.dll
 C:\Users\Ivan\source\repos\TDD Kata\bin\Debug\net6.0\nunit.engine.api.dll
 C:\Users\Ivan\source\repos\TDD Kata\bin\Debug\net6.0\nunit.engine.core.dll
 C:\Users\Ivan\source\repos\TDD Kata\bin\Debug\net6.0\testcentric.engine.metadata.dll
+C:\Users\Ivan\source\repos\TDD Kata\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Ivan\source\repos\TDD Kata\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Ivan\source\repos\TDD Kata\bin\Debug\net6.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml

@@ -5,22 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using NuGet.Frameworks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 
 namespace TDD_Kata
 {
     [TestFixture]
     internal class TestClass
     {
-        [AssemblyInitialize]
-        public static void AssemblyInit()
-        {
-            StringCalculator stringCalculator = new();
-        }
         [Test]
         public void TakesVoidReturnsZero()
         {
-            
+            StringCalculator stringCalculator = new();
             Assert.AreEqual(0, stringCalculator.Add(""));
         }
         [Test]
@@ -45,7 +40,8 @@ namespace TDD_Kata
         [Test]
         public void TakesDelimiterAndIgnoresIt()
         {
-
+            StringCalculator stringCalculator = new();
+            Assert.AreEqual(3, stringCalculator.Add("//;\n1;2"));
         }
     }
 }
