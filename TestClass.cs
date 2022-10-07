@@ -36,12 +36,20 @@ namespace TDD_Kata
             StringCalculator stringCalculator = new();
             Assert.AreEqual(6, stringCalculator.Add("1\n2,3"));
         }
-
         [Test]
         public void TakesDelimiterAndIgnoresIt()
         {
             StringCalculator stringCalculator = new();
             Assert.AreEqual(3, stringCalculator.Add("//;\n1;2"));
         }
+        [Test]
+        public void TakesNegativeReturnsException()
+        {
+            StringCalculator stringCalculator = new();
+
+            ArgumentException ex = Assert.Throws<ArgumentException>(delegate { stringCalculator.Add("//;\n1;-2"); });
+            Assert.That(ex.Message, Is.EqualTo("message"));
+        }
+
     }
 }

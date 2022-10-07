@@ -40,6 +40,11 @@ namespace TDD_Kata
 
             return numbersArray;
         }
+
+        public void CheckForNegativness()
+        {
+
+        }
     }
 
     class Program
