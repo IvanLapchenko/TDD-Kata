@@ -12,7 +12,6 @@ namespace TDD_Kata
     {
         public int Add(string numbers)
         {
-            
 
             if (numbers.Length > 0)
             {
@@ -22,8 +21,6 @@ namespace TDD_Kata
             }
 
             else { return 0; }
-                   
-            
         }
 
         public int[] PreparingNumbersArray(string str)
@@ -37,13 +34,19 @@ namespace TDD_Kata
             stringArray = stringArray.Where(x => !string.IsNullOrEmpty(x)).ToArray();
 
             numbersArray = Array.ConvertAll(stringArray, Convert.ToInt32);
+            numbersArray = CheckForNegativness(numbersArray);
 
             return numbersArray;
         }
 
-        public void CheckForNegativness()
+        public int[] CheckForNegativness(int[] numbersArray)
         {
-
+            foreach (int num in numbersArray)
+            {
+                if (num < 0)
+                    throw new ArgumentException("negatives not allowed"); 
+            }
+            return numbersArray;
         }
     }
 
@@ -54,8 +57,14 @@ namespace TDD_Kata
 
 
             StringCalculator stringCalculator = new();
+            string str = "//;\n1;-2";
+            int[] prepared = stringCalculator.PreparingNumbersArray(str);
+            foreach (int c in prepared)
+            {
+                Console.WriteLine(c);
+            }
+            
 
-            string str = "//;\n1;2";
 
 
         }
