@@ -42,10 +42,12 @@ namespace TDD_Kata
         {
             StringCalculator stringCalculator = new();
 
-            string num = "";
+            string num = "//;\n1;2";
             Console.WriteLine(num.Split(',').Length);
-            Console.WriteLine(stringCalculator.Add("1\n2,3"));
+            Console.WriteLine(stringCalculator.Add(num));
             Console.WriteLine("1\n2,3");
+
+            foreach (char n in num) { Console.Write(n); }
         }
     }
 }

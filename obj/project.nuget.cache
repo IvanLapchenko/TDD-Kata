@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "A/Co/rPx1hw91tod+cuMcY5j6Xeo2hGbEl8a8XuOUSZMbBj/7bzMCiUCX4mkjnMshjQ//SskQe8+EbZD0mo3/Q==",
+  "dgSpecHash": "rqzUxF3uidxTQmXpFy7hh0dngpI4Zu9k6fZFHoeQ0y39zDeP9ZxAZ+Ti1xSDDf41EjE2H6f9QB9GzO1Vm1wLsQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ivan\\source\\repos\\TDD Kata\\TDD Kata.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.3.2\\microsoft.testplatform.objectmodel.17.3.2.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.testplatform.testhost\\17.3.2\\microsoft.testplatform.testhost.17.3.2.nupkg.sha512",
+    "C:\\Users\\Ivan\\.nuget\\packages\\mstest.testframework\\2.2.10\\mstest.testframework.2.2.10.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\nuget.frameworks\\6.3.0\\nuget.frameworks.6.3.0.nupkg.sha512",
