@@ -48,7 +48,16 @@ namespace TDD_Kata
             StringCalculator stringCalculator = new();
 
             ArgumentException ex = Assert.Throws<ArgumentException>(delegate { stringCalculator.Add("//;\n1;-2"); });
-            Assert.That(ex.Message, Is.EqualTo("negatives not allowed"));
+            Assert.That(ex.Message, Is.EqualTo("negatives not allowed -2"));
+        }
+
+        [Test]
+        public void TakesNegativeReturnsExceptionWithPassedNegatives()
+        {
+            StringCalculator stringCalculator = new();
+
+            ArgumentException ex = Assert.Throws<ArgumentException>(delegate { stringCalculator.Add("//;\n1;-2///-54;,-25,15"); });
+            Assert.That(ex.Message, Is.EqualTo("negatives not allowed -2, -54, -25"));
         }
 
     }
