@@ -12,9 +12,15 @@ namespace TDD_Kata
 {
     class StringCalculator
     {
+        private int countAdds;
+        public int GetCalledCount()
+        {
+            return countAdds;
+        }
 
         public int Add(string numbers)
         {
+            countAdds++;
 
             if (numbers.Length > 0)
             {
