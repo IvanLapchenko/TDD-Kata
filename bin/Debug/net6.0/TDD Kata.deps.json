@@ -9,6 +9,7 @@
       "TDD Kata/1.0.0": {
         "dependencies": {
           "MSTest.TestFramework": "2.2.10",
+          "Microsoft.NET.Test.Sdk": "17.3.2",
           "Microsoft.TestPlatform.TestHost": "17.3.2",
           "NUnit": "3.13.3",
           "NUnit3TestAdapter": "4.2.1",
@@ -17,6 +18,14 @@
         },
         "runtime": {
           "TDD Kata.dll": {}
+        }
+      },
+      "Microsoft.CodeCoverage/17.3.2": {
+        "runtime": {
+          "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "17.300.622.32707"
+          }
         }
       },
       "Microsoft.CSharp/4.0.1": {
@@ -37,6 +46,12 @@
           "System.Runtime.Extensions": "4.1.0",
           "System.Runtime.InteropServices": "4.1.0",
           "System.Threading": "4.0.11"
+        }
+      },
+      "Microsoft.NET.Test.Sdk/17.3.2": {
+        "dependencies": {
+          "Microsoft.CodeCoverage": "17.3.2",
+          "Microsoft.TestPlatform.TestHost": "17.3.2"
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -661,12 +676,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.CodeCoverage/17.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+CeYNY9hYNRgv1wAID5koeDVob1ZOrOYfRRTLxU9Zm5ZMDMkMZ8wzXgakxVv+jtk8tPdE8Ze9vVE+czMKapv/Q==",
+      "path": "microsoft.codecoverage/17.3.2",
+      "hashPath": "microsoft.codecoverage.17.3.2.nupkg.sha512"
+    },
     "Microsoft.CSharp/4.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-17h8b5mXa87XYKrrVqdgZ38JefSUqLChUQpXgSnpzsM0nDOhE40FTeNWOJ/YmySGV6tG6T8+hjz6vxbknHJr6A==",
       "path": "microsoft.csharp/4.0.1",
       "hashPath": "microsoft.csharp.4.0.1.nupkg.sha512"
+    },
+    "Microsoft.NET.Test.Sdk/17.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-apR0ha1T8FujBwq1P8i/DOZjbI5XhcP/i8As4NnVztVSpZG8GtWRPCstcmgkUkBpvEfcrrDPlJWbuZY+Hl1hSg==",
+      "path": "microsoft.net.test.sdk/17.3.2",
+      "hashPath": "microsoft.net.test.sdk.17.3.2.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",

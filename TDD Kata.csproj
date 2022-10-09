@@ -6,9 +6,11 @@
     <RootNamespace>TDD_Kata</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>TDD_Kata.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
     <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="17.3.2" />
     <PackageReference Include="MSTest.TestFramework" Version="2.2.10" />
     <PackageReference Include="NuGet.Frameworks" Version="6.3.0" />

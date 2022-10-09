@@ -1,15 +1,18 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
+using NUnit.Framework.Constraints;
 using NUnit.Framework.Internal;
 
 namespace TDD_Kata
 {
     class StringCalculator
     {
+
         public int Add(string numbers)
         {
 
@@ -60,21 +63,13 @@ namespace TDD_Kata
 
     class Program
     {
+        
         public static void Main()
         {
 
-
             StringCalculator stringCalculator = new();
-            string str = "//;\n1;-2///-54;,-25,15";
-            int[] prepared = stringCalculator.PreparingNumbersArray(str);
-            foreach (int c in prepared)
-            {
-                Console.WriteLine(c);
-            }
-            
-
-
 
         }
+       
     }
 }

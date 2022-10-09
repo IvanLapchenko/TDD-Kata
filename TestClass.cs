@@ -59,6 +59,14 @@ namespace TDD_Kata
             ArgumentException ex = Assert.Throws<ArgumentException>(delegate { stringCalculator.Add("//;\n1;-2///-54;,-25,15"); });
             Assert.That(ex.Message, Is.EqualTo("negatives not allowed -2, -54, -25"));
         }
-
+        [Test]
+        public void TakesSeveralCallsAndReturnsHowManyCalls()
+        {
+            StringCalculator stringCalculator = new();
+            stringCalculator.Add("11,2");
+            stringCalculator.Add("11,2");
+            stringCalculator.Add("11,2");
+            Assert.AreEqual(3, stringCalculator.GetCalledCount());
+        }
     }
 }

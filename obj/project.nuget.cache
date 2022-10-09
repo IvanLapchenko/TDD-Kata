@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "rqzUxF3uidxTQmXpFy7hh0dngpI4Zu9k6fZFHoeQ0y39zDeP9ZxAZ+Ti1xSDDf41EjE2H6f9QB9GzO1Vm1wLsQ==",
+  "dgSpecHash": "IxUXJs4GjeSebg9RtAgxTEvnY+7KHV4Z6I7FmjocF5/eFZocIgYVRuZWTEthytVe5oGXh7W14PTvcRPE3RHz+g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ivan\\source\\repos\\TDD Kata\\TDD Kata.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
+    "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.net.test.sdk\\17.3.2\\microsoft.net.test.sdk.17.3.2.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.3.2\\microsoft.testplatform.objectmodel.17.3.2.nupkg.sha512",
