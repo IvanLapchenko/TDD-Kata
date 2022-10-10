@@ -15,15 +15,20 @@ namespace TDD_Kata
 
         public int countAdds;
 
-        public event Action<int> AddOccured;
+        public delegate void Notify();
+        
+        public event Notify? AddOccured;
 
-        public void GetCalledCount(int value)
+
+        public void AddCounter()
         {
-            countAdds += value;
+            countAdds++;
         }
 
         public int Add(string numbers)
         {
+            if (AddOccured != null)
+                AddOccured();
 
             if (numbers.Length > 0)
             {
@@ -76,17 +81,12 @@ namespace TDD_Kata
 
     class Program
     {
+
         
         public static void Main()
         {
-
             StringCalculator stringCalculator = new();
-            stringCalculator.AddOccured += stringCalculator.GetCalledCount;
-            stringCalculator.Add("11,2");
-            stringCalculator.Add("11,2");
-            stringCalculator.Add("11,2");
-            Console.WriteLine(stringCalculator.countAdds);
-            Console.WriteLine(stringCalculator.Add("1,3"));
+            stringCalculator.AddOccured += stringCalculator.AddCounter;
         }
        
     }

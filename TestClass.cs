@@ -63,6 +63,7 @@ namespace TDD_Kata
         public void TakesSeveralCallsAndReturnsHowManyCalls()
         {
             StringCalculator stringCalculator = new();
+            stringCalculator.AddOccured += stringCalculator.AddCounter;
             stringCalculator.Add("11,2");
             stringCalculator.Add("11,2");
             stringCalculator.Add("11,2");
@@ -74,7 +75,7 @@ namespace TDD_Kata
         {
 
             StringCalculator stringCalculator = new();
-            stringCalculator.AddOccured += stringCalculator.GetCalledCount;
+            stringCalculator.AddOccured += stringCalculator.AddCounter;
             stringCalculator.Add("11,2");
             stringCalculator.Add("11,2");
             stringCalculator.Add("11,2");
