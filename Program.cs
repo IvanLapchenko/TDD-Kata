@@ -49,20 +49,23 @@ namespace TDD_Kata
             char[] delimiterChars = { '/', ',', ';', ' ', '\n' };
 
             string[] stringArray;
-            int[] numbersArray;
+            int[] numbersList;
 
             stringArray = str.Split(delimiterChars);
             stringArray = stringArray.Where(x => !string.IsNullOrEmpty(x)).ToArray();
 
-            numbersArray = Array.ConvertAll(stringArray, Convert.ToInt32);
-            numbersArray = CheckForNegativness(numbersArray);
+            numbersList = Array.ConvertAll(stringArray, Convert.ToInt32);
 
-            return numbersArray;
+            numbersList = CheckForNegativness(numbersList);
+            numbersList = CheckIfMoreThan1000(numbersList);
+
+            return numbersList;
         }
 
         public int[] CheckForNegativness(int[] numbersArray)
         {
             List<int> negativeNumbers = new List<int>();
+            
 
             foreach (int num in numbersArray)
             {
@@ -77,6 +80,20 @@ namespace TDD_Kata
             }
             return numbersArray;
         }
+
+        public int[] CheckIfMoreThan1000(int[] numbers)
+        {
+            List<int> moreThan1000 = new List<int>();
+
+            foreach (int num in numbers)
+            {
+                if (num < 1000)
+                    moreThan1000.Add(num);
+            }
+            return moreThan1000.ToArray();
+        }
+
+
     }
 
     class Program

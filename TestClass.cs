@@ -81,5 +81,11 @@ namespace TDD_Kata
             stringCalculator.Add("11,2");
             Assert.AreEqual(3, stringCalculator.countAdds);
         }
+        [Test]
+        public void IgnoresMoreThan1000()
+        {
+            StringCalculator stringCalculator = new();
+            Assert.AreEqual(1002, stringCalculator.Add("//;\n1;2, 2000, 999"));
+        }
     }
 }
