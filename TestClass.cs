@@ -66,7 +66,19 @@ namespace TDD_Kata
             stringCalculator.Add("11,2");
             stringCalculator.Add("11,2");
             stringCalculator.Add("11,2");
-            Assert.AreEqual(3, stringCalculator.GetCalledCount());
+            Assert.AreEqual(3, stringCalculator.countAdds);
+        }
+
+        [Test]
+        public void TakesSeveralCallsAndReturnsHowManyCallsUsingEvent()
+        {
+
+            StringCalculator stringCalculator = new();
+            stringCalculator.AddOccured += stringCalculator.GetCalledCount;
+            stringCalculator.Add("11,2");
+            stringCalculator.Add("11,2");
+            stringCalculator.Add("11,2");
+            Assert.AreEqual(3, stringCalculator.countAdds);
         }
     }
 }

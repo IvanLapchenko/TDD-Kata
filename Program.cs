@@ -12,15 +12,18 @@ namespace TDD_Kata
 {
     class StringCalculator
     {
-        private int countAdds;
-        public int GetCalledCount()
+
+        public int countAdds;
+
+        public event Action<int> AddOccured;
+
+        public void GetCalledCount(int value)
         {
-            return countAdds;
+            countAdds += value;
         }
 
         public int Add(string numbers)
         {
-            countAdds++;
 
             if (numbers.Length > 0)
             {
@@ -29,7 +32,11 @@ namespace TDD_Kata
                 return numbersArray.Sum();
             }
 
-            else { return 0; }
+            else 
+            {
+                return 0;
+            }
+
         }
 
         public int[] PreparingNumbersArray(string str)
@@ -74,7 +81,12 @@ namespace TDD_Kata
         {
 
             StringCalculator stringCalculator = new();
-
+            stringCalculator.AddOccured += stringCalculator.GetCalledCount;
+            stringCalculator.Add("11,2");
+            stringCalculator.Add("11,2");
+            stringCalculator.Add("11,2");
+            Console.WriteLine(stringCalculator.countAdds);
+            Console.WriteLine(stringCalculator.Add("1,3"));
         }
        
     }
