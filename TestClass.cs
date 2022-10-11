@@ -87,5 +87,11 @@ namespace TDD_Kata
             StringCalculator stringCalculator = new();
             Assert.AreEqual(1002, stringCalculator.Add("//;\n1;2, 2000, 999"));
         }
+        [Test]
+        public void TakesDelimiterReturnsSum()
+        {
+            StringCalculator stringCalculator = new();
+            Assert.AreEqual(6, stringCalculator.Add("//[**][%%]\n1**2%%3"));
+        }
     }
 }

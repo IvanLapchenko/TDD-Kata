@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -19,7 +22,6 @@ namespace TDD_Kata
         
         public event Notify? AddOccured;
 
-
         public void AddCounter()
         {
             countAdds++;
@@ -27,15 +29,19 @@ namespace TDD_Kata
 
         public int Add(string numbers)
         {
-            if (AddOccured != null)
-                AddOccured();
+            AddOccured?.Invoke();
 
-            if (numbers.Length > 0)
+            if (numbers.Length > 1)
             {
                 int[] numbersArray = PreparingNumbersArray(numbers);
 
                 return numbersArray.Sum();
             }
+
+            if (numbers.Length == 1)
+            {
+                return Convert.ToInt32(numbers);
+            }    
 
             else 
             {
@@ -46,11 +52,14 @@ namespace TDD_Kata
 
         public int[] PreparingNumbersArray(string str)
         {
-            char[] delimiterChars = { '/', ',', ';', ' ', '\n' };
-
             string[] stringArray;
             int[] numbersList;
 
+            char[] delimiterChars = DefiningDelimiters(str);
+            foreach (char c in delimiterChars)
+            {
+                Console.WriteLine(c);
+            }
             stringArray = str.Split(delimiterChars);
             stringArray = stringArray.Where(x => !string.IsNullOrEmpty(x)).ToArray();
 
@@ -60,6 +69,33 @@ namespace TDD_Kata
             numbersList = CheckIfMoreThan1000(numbersList);
 
             return numbersList;
+        }
+        
+        public char[] DefiningDelimiters(string str)
+        {
+            Regex regex = new Regex("\\[.*\\]");
+
+            HashSet<char> delimiterChars = new() { ',', ' ', '\n', '/' };
+
+            if (str[..3] == "//[")
+            {
+                Match match = regex.Match(str);
+                var delimiter = match.Value;
+
+                foreach (char c in delimiter)
+                {
+                    delimiterChars.Add(c);
+                }
+            }
+
+            else if (str.Substring(0, 2) == "//")
+            {
+                delimiterChars.Add(str[2]);
+            }
+
+            char [] delimiters = delimiterChars.ToArray();
+
+            return delimiters;
         }
 
         public int[] CheckForNegativness(int[] numbersArray)
@@ -104,6 +140,7 @@ namespace TDD_Kata
         {
             StringCalculator stringCalculator = new();
             stringCalculator.AddOccured += stringCalculator.AddCounter;
+            stringCalculator.Add("//[###]\n12###2");
         }
        
     }
